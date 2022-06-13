@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import api from './api/photos'
+import { useState, useEffect } from 'react';
+import ListOfPhotos from './components/ListOfPhotos';
+
 
 function App() {
+  
+  const [photos, setPhotos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  
+  useEffect(()=>{
+    const fetchPhotos = async () => {
+      try{
+        const response = await api.get('/photos')
+        if(response.data){
+          setPhotos(response.data)}
+          setLoading(false)
+          console.log(response.data)
+        } catch(error){
+          if(error.response){
+            setLoading(false)
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else {
+            console.log(`Error! ${error.request || error.message}`)
+          }
+        }
+      };
+      fetchPhotos();
+    }, [])
+    console.log(photos[0])
+    
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      {loading? 'Loading...Please wait' : <ListOfPhotos photos={photos} />}
+      <Footer />
     </div>
   );
 }
