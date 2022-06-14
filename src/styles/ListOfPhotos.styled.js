@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const StyledListOfPhotos = styled.div`
+export const StyledListOfPhotos = styled.ul`
   
   margin-bottom: 150px;
 
-  ul {
+  & {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -14,7 +14,7 @@ export const StyledListOfPhotos = styled.div`
     padding: 0px;
     margin: 0;
   }
-  ul>li {
+  li {
     // margin: 5px;
     list-style-type: none;
     
@@ -28,6 +28,10 @@ export const StyledListOfPhotos = styled.div`
   img:hover {
     box-shadow: 3.5px 3.5px rgb(80,201,200), 7px 7px rgb(255,255,255);
     }
-  
+  .pagination {
+    display: flex;
+    width: 90%;
+    background-color: white;
+  }
   
 `

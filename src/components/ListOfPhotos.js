@@ -9,6 +9,8 @@ function ListOfPhotos({photos}) {
   const [showDetails, setShowDetails] = useState(false);
   const [clickedPhotoId, setClickedPhotoId] = useState(null);
   
+  
+
   const handleClick = (id) => {
     console.log('clicked')
     setShowDetails(prevState=>!prevState)
@@ -17,16 +19,15 @@ function ListOfPhotos({photos}) {
   
   return (
     <>
-    {!showDetails? (<StyledListOfPhotos>
-    <ul>
+    {!showDetails? 
+    (<StyledListOfPhotos>
       <ListOfPhotosCard photos={photos} handleClick={handleClick} />
-    </ul>
-    </StyledListOfPhotos>) :
+     </StyledListOfPhotos>):
     (<>
     <StyledImageDetails>
     <ImageDetails photo={typeof clickedPhotoId ==='number'? photos[clickedPhotoId] : null}/>
-    </StyledImageDetails>
     <ToggleDetails title={'Back to Photobrowser...'} handleClick={handleClick} />
+    </StyledImageDetails>
     </>
     )
     }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export const StyledToggleDetails = styled.div`
-  button {
+export const StyledToggleDetails = styled.button`
+  
   background-color: #111827;
   border: 1px solid transparent;
   border-radius: .75em;
@@ -13,13 +13,13 @@ export const StyledToggleDetails = styled.div`
   line-height: 1.5em;
   padding: .5em 1.2em;
   
-}
 
-button:hover {
+
+&:hover {
   background-color: #374151;
 }
 
-button:focus {
+&:focus {
   box-shadow: none;
   outline: 2px solid transparent;
   outline-offset: 2px;
