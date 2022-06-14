@@ -11,7 +11,7 @@ function ListOfPhotosCard({photos, handleClick}) {
         <li key={item.id}>
           <div>
             
-              <img src={item.thumbnailUrl} onClick={() => handleClick(item.id)} alt="Thumbnail did not load"/>
+              <img src={item.thumbnailUrl} onClick={() => handleClick(parseInt(item.id))} alt="Thumbnail did not load"/>
             
           </div>           
                  

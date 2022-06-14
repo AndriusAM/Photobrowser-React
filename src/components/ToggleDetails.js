@@ -4,7 +4,7 @@ import { StyledToggleDetails } from '../styles/ToggleDetails.styled'
 function ToggleDetails({title, handleClick, photoId}) {
     
   return (
-    <StyledToggleDetails onClick={()=>handleClick()}>
+    <StyledToggleDetails onClick={()=>handleClick(photoId)}>
       {title}
     </StyledToggleDetails>
   )

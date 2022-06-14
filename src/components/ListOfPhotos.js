@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { StyledListOfPhotos } from '../styles/ListOfPhotos.styled'
 import ToggleDetails from './ToggleDetails'
 import ImageDetails from './ImageDetails';
@@ -8,7 +8,7 @@ import { StyledImageDetails } from '../styles/ImageDetails.styled';
 function ListOfPhotos({photos}) {
   const [showDetails, setShowDetails] = useState(false);
   const [clickedPhotoId, setClickedPhotoId] = useState(null);
-  
+  console.log("Photos in LIstOfPhotos:", photos)
   
 
   const handleClick = (id) => {
@@ -16,7 +16,9 @@ function ListOfPhotos({photos}) {
     setShowDetails(prevState=>!prevState)
     setClickedPhotoId(id)
   }
-  
+    
+  const clickedPhoto = photos.find(item=>item.id===clickedPhotoId)
+
   return (
     <>
     {!showDetails? 
@@ -25,7 +27,7 @@ function ListOfPhotos({photos}) {
      </StyledListOfPhotos>):
     (<>
     <StyledImageDetails>
-    <ImageDetails photo={typeof clickedPhotoId ==='number'? photos[clickedPhotoId] : null}/>
+    <ImageDetails photo={clickedPhoto? clickedPhoto : null}/>
     <ToggleDetails title={'Back to Photobrowser...'} handleClick={handleClick} />
     </StyledImageDetails>
     </>
