@@ -1,12 +1,10 @@
 {
   "files": {
-    "main.js": "/Photobrowser-React/static/js/main.acbc1c38.js",
-    "static/js/787.28cb0dcd.chunk.js": "/Photobrowser-React/static/js/787.28cb0dcd.chunk.js",
+    "main.js": "/Photobrowser-React/static/js/main.7039888d.js",
     "index.html": "/Photobrowser-React/index.html",
-    "main.acbc1c38.js.map": "/Photobrowser-React/static/js/main.acbc1c38.js.map",
-    "787.28cb0dcd.chunk.js.map": "/Photobrowser-React/static/js/787.28cb0dcd.chunk.js.map"
+    "main.7039888d.js.map": "/Photobrowser-React/static/js/main.7039888d.js.map"
   },
   "entrypoints": [
-    "static/js/main.acbc1c38.js"
+    "static/js/main.7039888d.js"
   ]
 }
