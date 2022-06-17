@@ -18,8 +18,7 @@ This installs all the dependencies
 
 4. To run the react - app, type:
 
-**npm start
-**
+**npm start**
 
 
 That's it! 
