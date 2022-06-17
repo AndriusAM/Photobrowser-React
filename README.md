@@ -1,4 +1,4 @@
-To run this code locally, please follow the instructions below
+To download and run this code locally, please follow the instructions below
 
 
 
