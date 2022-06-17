@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 export const StyledNavBar = styled.nav`
   font-size: 0.8rem;
-  width: 90%;
+  margin: 0;
   display: flex;
   padding: 1rem;
-  margin: 0 1rem;
   justify-content: space-between; 
   align-items: flex-start;
   div:first-child {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 0 0;
   }
   ul {
     display: flex;

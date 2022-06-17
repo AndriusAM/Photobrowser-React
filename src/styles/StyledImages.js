@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const StyledImages = styled.ul`
-
+& {
+  margin: 0 1rem;
+  padding: 0;
+}
   img {
     width: 4.5rem;
     border-radius: 0.5rem;

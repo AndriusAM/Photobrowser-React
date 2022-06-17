@@ -6,12 +6,9 @@ export const FlexContainer = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: ${(props)=> props.flexDir || "column"};
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
 
-  /* h1 {
-    max-width: 800px;
-  } */
 `
