@@ -8,7 +8,6 @@ export const StyledButton = styled.button`
   color: #FFFFFF;
   cursor: pointer;
   flex: 0 0 auto;
-  font-size: 0.5rem;
   font-weight: 600;
   line-height: 1.5em;
   padding: .4em 1.2em;

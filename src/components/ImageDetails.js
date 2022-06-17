@@ -4,7 +4,6 @@ import { StyledImageDetails } from '../styles/ImageDetails.styled'
 
 import ListOfPhotosCard from './ListOfPhotosCard';
 import capitalize from './capitalize';
-import ToggleDetails from './ToggleDetails';
 import { StyledButton } from '../styles/ToggleDetails.styled';
 
 function ImageDetails({allPhotos, photo}) {
