@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Photobrowser-React/static/js/main.448eafd0.js",
+    "main.js": "/Photobrowser-React/static/js/main.f507241d.js",
     "index.html": "/Photobrowser-React/index.html",
-    "main.448eafd0.js.map": "/Photobrowser-React/static/js/main.448eafd0.js.map"
+    "main.f507241d.js.map": "/Photobrowser-React/static/js/main.f507241d.js.map"
   },
   "entrypoints": [
-    "static/js/main.448eafd0.js"
+    "static/js/main.f507241d.js"
   ]
 }
