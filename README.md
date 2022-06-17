@@ -4,22 +4,22 @@ To run this code locally, please follow the instructions below
 
 1. Open your terminal and type:
 
-git clone https://github.com/AndriusAM/Photobrowser-React
+**git clone https://github.com/AndriusAM/Photobrowser-React**
 
 2. To cd into the cloned folder, type:
 
-cd Photobrowser-react
+**cd Photobrowser-react**
 
 3. Then type:
 
-npm install
+**npm install**
 
 This installs all the dependencies
 
 4. To run the react - app, type:
 
-npm start
-
+**npm start
+**
 
 
 That's it! 
