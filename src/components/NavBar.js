@@ -5,15 +5,15 @@ function NavBar() {
   return (
     <StyledNavBar>
       <div>
-        <a href="/">Photobrowser</a>
+        <a href="https://andriusam.github.io/Photobrowser-React/">Photobrowser</a>
       </div>
       <div>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <a href="https://andriusam.github.io/Photobrowser-React/">Home</a>
           </li>
           <li>
-            <a href="/">Albums</a>
+            <a href="https://andriusam.github.io/Photobrowser-React/">Albums</a>
           </li>
           <li>
             <a href="#bottom">Contacts</a>

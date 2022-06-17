@@ -15,7 +15,7 @@ function ImageDetails({allPhotos, photo}) {
           {!renderAlbum? 
             <StyledImageDetails>
             <div><img src={photo.url} alt=""/></div>
-            <p>{capitalize(photo.title)}</p>
+            <h2>{capitalize(photo.title)}</h2>
             <p className="albumTitle" onClick={()=> setRenderAlbum(true)}>Album {photo.albumId}</p>
             </StyledImageDetails>:
           <>
@@ -24,7 +24,7 @@ function ImageDetails({allPhotos, photo}) {
               <ListOfPhotosCard photos={albumPhotos}/>
             </FlexContainer>
             <StyledButton title={""} 
-            onClick={()=> {setRenderAlbum(false); console.log('clicked back to photos')}}>
+            onClick={()=> setRenderAlbum(false)}>
               Back to Photo...
             </StyledButton>
           </>

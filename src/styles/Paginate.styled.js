@@ -3,6 +3,8 @@ import ReactPaginate from "react-paginate";
 
 export const StyledReactPaginate = styled(ReactPaginate)`
   display: flex;
+  padding: 0;
+  margin: 0;
   a {
     font-size: 0.8rem;
     font-weight: 500;

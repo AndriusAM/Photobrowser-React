@@ -15,8 +15,25 @@ export const StyledImageDetails = styled.div`
     margin: 0 0.5rem;
     border-radius: 0.2rem;
    }
+   .albumTitle {
+      border: 2px solid #111827;
+      border-radius: .75em;
+      margin: 0.2rem auto;
+      padding: .4em 1.2em;
+      margin-top: 0.2rem;
+      max-width: 5rem;
+   }
    .albumTitle:hover {
-      border: 1px solid #fff;
+      background-color: #111827;
+      border: 1px solid transparent;
+      border-radius: .75em;
+      color: #FFFFFF;
+      cursor: pointer;
+      flex: 0 0 auto;
+      font-weight: 600;
+      line-height: 1.5em;
+      padding: .4em 1.2em;
+      margin-top: 0.2rem;
    }
   
 `

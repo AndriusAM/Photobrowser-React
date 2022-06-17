@@ -55,9 +55,9 @@ function App() {
        <RenderPhotos allPhotos={photos} pagePhotos={displayPhotos} pageDisplay={setShowPages}/>
         </>)}
        {showPages && <StyledReactPaginate
-        previousLabel={"<< Previous"}
+        previousLabel={"Previous"}
         previousLinkClassName={"previous"}
-        nextLabel={"Next >>"}
+        nextLabel={"Next"}
         nextLinkClassName={"next"}
         pageCount={pageCount}
         onPageChange={changePage}
