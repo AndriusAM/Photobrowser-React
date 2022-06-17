@@ -1,16 +1,38 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { FlexContainer } from '../styles/Flex';
+import { StyledImageDetails } from '../styles/ImageDetails.styled'
 
-function ImageDetails({photo}) {
+import ListOfPhotosCard from './ListOfPhotosCard';
+import capitalize from './capitalize';
+import ToggleDetails from './ToggleDetails';
+import { StyledButton } from '../styles/ToggleDetails.styled';
+
+function ImageDetails({allPhotos, photo}) {
+  const [renderAlbum, setRenderAlbum] = useState(false);
+  const albumPhotos = allPhotos.filter(item => item.albumId === photo.albumId)
   
-  return (
-    <>
-      <div className="container">
-      <img src={photo.url} alt=""/>
-      <h4>{photo.title}</h4>
-      <h5>Album {photo.albumId}</h5>
-      </div>
-    </>
-  )
+  return <>
+          {!renderAlbum? 
+            <StyledImageDetails>
+            <div><img src={photo.url} alt=""/></div>
+            <p>{capitalize(photo.title)}</p>
+            <p className="albumTitle" onClick={()=> setRenderAlbum(true)}>Album {photo.albumId}</p>
+            </StyledImageDetails>:
+          <>
+            <FlexContainer flexDir="row">
+              <h3>Album {photo.albumId}</h3>
+              <ListOfPhotosCard photos={albumPhotos}/>
+            </FlexContainer>
+            <StyledButton title={""} 
+            onClick={()=> {setRenderAlbum(false); console.log('clicked back to photos')}}>
+              Back to Photo...
+            </StyledButton>
+          </>
+          }
+        </>
+      
+    
+  
 }
 
 export default ImageDetails

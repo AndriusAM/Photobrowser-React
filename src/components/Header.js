@@ -5,7 +5,8 @@ function Header() {
   return (
     <StyledHeader>
     
-      <h1>Photobrowser</h1>
+      <h2>Fast and lightweight gallery for your needs.</h2>
+      <p>Browse, explore, download and use!</p>
     
     </StyledHeader>
   )

@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyledToggleDetails } from '../styles/ToggleDetails.styled'
+import { StyledButton } from '../styles/ToggleDetails.styled'
 
 function ToggleDetails({title, handleClick, photoId}) {
     
   return (
-    <StyledToggleDetails onClick={()=>handleClick(photoId)}>
+    <StyledButton onClick={()=>handleClick(photoId)}>
       {title}
-    </StyledToggleDetails>
+    </StyledButton>
   )
 }
 

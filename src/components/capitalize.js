@@ -1,6 +1,6 @@
 function capitalize(str) {
   const string = str;
-  const capitalizedString = string.charAt(0).toUpperCase() + string.slice(1,12) + " "
+  const capitalizedString = string.charAt(0).toUpperCase() + string.slice(1)
 
   return capitalizedString
 }

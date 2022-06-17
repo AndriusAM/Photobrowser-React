@@ -3,9 +3,9 @@ import { StyledFooter } from '../styles/Footer.styled'
 
 function Footer() {
   return (
-    <StyledFooter>
+    <StyledFooter id='bottom'>
       <p>
-      &copy; 2022 Photobrowser. All rights reserved
+      &copy; 2022 Photobrowser <br></br>All rights reserved
         </p>
     </StyledFooter>
   )

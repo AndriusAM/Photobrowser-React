@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledToggleDetails = styled.button`
+export const StyledButton = styled.button`
   
   background-color: #111827;
   border: 1px solid transparent;
@@ -8,10 +8,11 @@ export const StyledToggleDetails = styled.button`
   color: #FFFFFF;
   cursor: pointer;
   flex: 0 0 auto;
-  font-size: 1.125rem;
+  font-size: 0.5rem;
   font-weight: 600;
   line-height: 1.5em;
-  padding: .5em 1.2em;
+  padding: .4em 1.2em;
+  margin-top: 0.2rem;
   
 
 

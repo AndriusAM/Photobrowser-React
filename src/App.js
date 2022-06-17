@@ -3,10 +3,10 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import api from './api/photos'
 import { useState, useEffect } from 'react';
-import ListOfPhotos from './components/ListOfPhotos';
-import ReactPaginate from 'react-paginate';
 import { FlexContainer } from './styles/Flex';
 import { StyledReactPaginate } from './styles/Paginate.styled';
+import NavBar from './components/NavBar';
+import RenderPhotos from './components/RenderPhotos';
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [pageNumber, setPageNumber] = useState(0);
+  const [showPages, setShowPages] = useState(true);
   
   
   useEffect(()=>{
@@ -36,7 +37,6 @@ function App() {
       };
       fetchPhotos();
     }, [])
-    console.log(photos[0])
     
     const photosPerPage = 20;
     const pagesVisited = pageNumber*photosPerPage
@@ -48,19 +48,22 @@ function App() {
 
   return (
     <FlexContainer>
-      <Header />
+      {showPages && <NavBar />}
+      {showPages && <Header />}
       {loading? 'Loading...Please wait' :
        (<>
-       <ListOfPhotos photos={displayPhotos}/>
-       <StyledReactPaginate
-        previousLabel={"Previous"}
-        nextLabel={"Next"}
+       <RenderPhotos allPhotos={photos} pagePhotos={displayPhotos} pageDisplay={setShowPages}/>
+        </>)}
+       {showPages && <StyledReactPaginate
+        previousLabel={"<< Previous"}
+        previousLinkClassName={"previous"}
+        nextLabel={"Next >>"}
+        nextLinkClassName={"next"}
         pageCount={pageCount}
         onPageChange={changePage}
         containerClassName={"paginationButtons"}
         className="pagination"
-        />
-        </>)}
+        />}
       <Footer />
     </FlexContainer>
   );
